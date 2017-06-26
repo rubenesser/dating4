@@ -8,25 +8,18 @@ function multiply() {
 }
 */
 
-
-
-const arr = [ 'Marianne','Linda', 'Kim', 'Judith', 'Eveline', 'Lisa', ]
-arr.length // => this will equal 3
-arr[arr.length] // => this will be undefined
-arr[arr.length - 1] // => this will be 'things'
-
-
-/*const randomNumber = getRandomNumber(0, arr.length)
-
-function getRandomNumber(min, max) {
-        return Math.random() * (max - min) + min;
-      } */// This code is not working!? 
-
+const names = [
+  'Marianne','Linda', 'Kim', 'Judith', 'Eveline', 'Lisa'
+]
 
 function finder() {
-  const insert_name = document.getElementById('insert_name').value
-  const answerBox = document.getElementById('answer')
+  const rNumber = getRandomNumber(0, names.length - 1);
+  const answerBox = document.getElementById('answer');
+  const name = document.getElementById('persons_name').value;
 
-answerBox.innerHTML = insert_name + arr[arr.length - 1]
+  answerBox.innerHTML = 'Hello, your name is ' + name + ', you are paired with ' + names[rNumber];
+}
 
+function getRandomNumber(min, max) {
+  return Math.round(Math.random() * (max - min)) + min;
 }
