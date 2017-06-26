@@ -17,7 +17,7 @@ function finder() {
   const answerBox = document.getElementById('answer');
   const name = document.getElementById('persons_name').value;
 
-  answerBox.innerHTML = 'Hello, your name is ' + name + ', you are paired with ' + names[rNumber];
+  answerBox.innerHTML = 'Hi ' + name + ', you are paired with '  + names[rNumber];
 }
 
 function getRandomNumber(min, max) {
